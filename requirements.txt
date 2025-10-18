@@ -1,0 +1,4 @@
+pynutclient~=2.8.4
+schedule~=1.2.2
+proxmoxer~=2.2.0
+requests

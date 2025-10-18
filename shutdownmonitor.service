@@ -1,0 +1,14 @@
+[Unit]
+Description=Shutdown VM after power loss
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/pynutshutdown # Optional: set if your script needs a specific working directory
+ExecStart=/root/pynutshutdown/venv/bin/python3 /root/pynutshutdown/main.py # Full path to python interpreter and script
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
